@@ -27,13 +27,9 @@ function App() {
   return (
     <div>
       <h2>Let's get started!</h2>
-        {expenses.map((expenses =>
 	        <NewExpensesComponent 
-            title={expenses.title} 
-            amount={expenses.amount} 
-            date={expenses.date}
+            lista = {expenses}
           />
-        ))}  
     </div>
   );
 }

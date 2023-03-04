@@ -5,11 +5,14 @@ import './NewExpensesComponent.css';
 function NewExpensesComponent(prop){
     return (
         <div className="expenses">
-            <ExpenseItem 
-                title={prop.title} 
-                amount={prop.amount} 
-                date={prop.date}>
-            </ExpenseItem>
+        
+        {prop.lista.map((expense) => (
+        <ExpenseItem 
+          title={expense.title} 
+          amount={expense.amount} 
+          date={expense.date}
+        />
+      ))} 
         </div>
     );
 }
